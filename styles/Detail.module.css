@@ -1,0 +1,17 @@
+.detailDiv {
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  font-family: var(--font-heading);
+  font-size: 45px;
+  color: var(--color-heading);
+  margin: 0 0 10px 0;
+}
+.para {
+  font-family: var(--font-text);
+  color: var(--color-heading);
+  font-weight: 100;
+  word-spacing: 5px;
+  line-height: 25px;
+}

@@ -1,0 +1,124 @@
+.section {
+  margin: 30px 0 0 0;
+  position: relative;
+}
+.featureDiv {
+  display: grid;
+  margin: var(--margin);
+  grid-template-columns: 45% 55%;
+}
+.featureDiv_img {
+  display: flex;
+  align-items: center;
+}
+.rowReverse > .featureDiv_img {
+  justify-content: flex-end;
+}
+.featureDiv_img > img {
+  height: 100px;
+  filter: drop-shadow(4px 4px 20px rgba(0 0 0 / 0.5));
+}
+.detailDiv {
+  display: flex;
+  align-items: center;
+  padding: 0 5vw 0 0;
+}
+.featureOne img {
+  height: 20vw;
+}
+.featureTwo img {
+  height: 45vw;
+}
+.featureTwo > .detailDiv {
+  order: -1;
+}
+.featureCardSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featureCard {
+  width: 300px;
+  margin: 0 25px;
+}
+.iconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #375369;
+  margin: 15px auto;
+}
+.featureCardDetail h1 {
+  font-family: var(--font-text);
+  font-weight: 800;
+  font-size: 15px;
+  text-align: center;
+}
+.featureCardDetail p {
+  text-align: center;
+}
+.inputSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 80px 0;
+  padding: 0 var(--padding-xy);
+}
+.inputSection h1 {
+  font-size: 40px;
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+}
+.backgroundCircle {
+  right: -399px;
+  top: 248px;
+  width: 750px;
+  height: 750px;
+}
+
+@media screen and (max-width: 750px) {
+  .featureDiv {
+    grid-template-columns: none;
+  }
+  .featureDiv_img {
+    justify-content: center;
+  }
+  .detailDiv {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .featureDiv p,
+  .featureDiv h1 {
+    text-align: center;
+  }
+  .featureTwo > .detailDiv {
+    order: 1;
+  }
+  .rowReverse > .featureDiv_img {
+    justify-content: center;
+  }
+  .featureOne img {
+    height: 35vw;
+  }
+  .featureCardSection {
+    flex-direction: column;
+  }
+  .inputSection {
+    grid-template-columns: none;
+  }
+  .inputSection h1 {
+    text-align: center;
+    margin: 0 0 15px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .backgroundCircle {
+    right: -161px;
+    top: 369px;
+    width: 400px;
+    height: 400px;
+  }
+}

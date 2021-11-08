@@ -1,0 +1,67 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px var(--padding-xy);
+  background-color: var(--color-heading);
+  overflow: hidden;
+  position: relative;
+}
+.detailDiv {
+  padding: 0 100px 0 0;
+  z-index: 2;
+}
+.abtUsButton {
+  margin: 20px 0 0 0;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: 16px;
+}
+.companiesLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.companiesLogo > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.companiesLogo > div > svg {
+  margin: 0 50px 15px 0;
+  width: 9vw;
+  z-index: 2;
+}
+.backgroundCircle {
+  top: -581px;
+  left: -415px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    grid-template-columns: none;
+  }
+  .detailDiv {
+    padding: 0;
+    z-index: 2;
+  }
+  .companiesLogo > div {
+    justify-content: center;
+    align-items: center;
+  }
+  .companiesLogo > div > svg {
+    width: 15vw;
+    margin: 15px 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .companiesLogo > div > svg {
+    width: 30vw;
+    margin: 10px;
+  }
+}

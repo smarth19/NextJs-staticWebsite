@@ -1,0 +1,23 @@
+.inputDiv {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 0px #0000004a;
+  overflow: hidden;
+  background-color: #fff;
+}
+.inputDiv > input {
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-family: var(--font-text);
+}
+.inputDiv > input::placeholder {
+  font-size: 15px;
+  font-family: var(--font-text);
+}
+.inputDiv > button {
+  position: relative;
+  right: -1px;
+}

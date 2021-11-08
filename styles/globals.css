@@ -1,16 +1,140 @@
-html,
-body {
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Varela+Round&family=Zen+Antique+Soft&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+  padding: 0;
   box-sizing: border-box;
+}
+
+:root{
+  --font-heading: 'Zen Antique Soft', serif;
+  --font-text: 'Merriweather Sans', sans-serif;
+  --font-text1: 'Bebas Neue', cursive;
+  --font-text2: 'Varela Round', sans-serif;
+  --shadow: 2px ​5px 20px rgba(0 0 0 / 0.3);
+  --color-heading: #36536b;
+  --color-backgroundCircle: #749bbb98;
+  --padding-xy: 10vw;
+  --margin: 10vw;
+}
+
+body{
+  background-color: aliceblue;
+}
+.App{
+  overflow-x: hidden;
+}
+button, input{
+  background-color: #fff;
+  outline: none;
+  display: block;
+  border-color: transparent;
+}
+.backgroundCircle{
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-backgroundCircle);
+  border-radius: 50%;
+  z-index: -1;
+}
+.header {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  padding: 20px var(--padding-xy);
+}
+.header > div {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.logoDiv > img {
+  width: 81px;
+}
+.navigationDiv {
+  margin: 0 0 0 60px;
+}
+.ul {
+  display: flex;
+}
+.ul > li {
+  list-style: none;
+  padding: 5px 15px;
+  font-family: var(--font-text);
+  font-weight: 600;
+  color: rgba(0 0 0 / 0.6);
+  font-size: 16px;
+  transition: 0.1s;
+}
+.ul > li:hover {
+  cursor: pointer;
+  color: rgba(0 0 0 / 1);
+}
+.btnActionsDiv{
+  justify-content: center;
+}
+.footer {
+  background-color: var(--color-heading);
+  position: relative;
+  overflow: hidden;
+}
+.socialAccounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialAccounts svg {
+  margin: 0 15px;
+}
+footer > .logoDiv > img {
+  width: 50px;
+}
+footer > .logoDiv > .navigationDiv > .ul > li {
+  color: #fff;
+}
+.footerBackgroundCircle {
+  top: -240px;
+  right: -454px;
+}
+
+@media screen and (max-width: 1000px) {
+  :root{
+    --padding-xy: 7vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  nav.header{
+    grid-template-columns: none;
+  }
+  nav > .btnActionsDiv{
+    display: none;
+  }
+  footer.header{
+    grid-template-columns: 1fr 1fr;
+  }
+  footer > .logoDiv > .navigationDiv {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav > .logoDiv{
+    flex-direction: column;
+  }
+  nav > .logoDiv > .navigationDiv{
+    margin: 0;
+  }
+  footer.header{
+    grid-template-columns: none;
+    padding: 5px var(--padding-xy);
+  }
+  footer > .logoDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5px 0;
+  }
+  footer > .logoDiv svg {
+    width: 30px;
+  }
 }
